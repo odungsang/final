@@ -24,7 +24,7 @@ const App = () => {
     <div className="container" style={{ backgroundColor: color }}>
       <p>Background Color : {color} </p>
       <div className="input-container">
-        <input type="text" onChange={handleColor} />
+        <input type="text" onChange={handleColor} value={color}/>
       </div>
     </div>
   );
