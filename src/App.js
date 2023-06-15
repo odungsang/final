@@ -8,7 +8,7 @@ const App = () => {
   const handleColor = (event) => {
     const { value } = event.target;
     
-    // 16진수 색상 코드를 체크하기 위한 정규표현식
+    // 16진수 색상 코드를 체크하기 위한 정규표현식 선언
     const regExp = new RegExp("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
     const isHex = regExp.test(value);
     
@@ -23,7 +23,9 @@ const App = () => {
   return (
     <div className="container" style={{ backgroundColor: color }}>
       <p>Background Color : {color} </p>
-      <input type="text" onChange={handleColor} />
+      <div className="input-container">
+        <input type="text" onChange={handleColor} />
+      </div>
     </div>
   );
 };
